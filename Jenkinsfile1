@@ -2,49 +2,49 @@ pipeline {
     agent any
     stages{
         stage('Build'){
-            step{
+            steps{
              echo 'Build'
             }
         }
         stage('Test'){
-            step{
+            steps{
               echo 'Test'
             }
         }
         stage('Quality Gate - sonar Quebe'){
-            step{
+            steps{
                echo 'sonar'
             }
         }
         stage('Push to atrifactory'){
-            step{
+            steps{
                 echo 'Build'
             }
         }
 
 
         stage('Deploy to Dev'){
-            step{
+            steps{
 
             }
         }
         stage('Deploy to QA'){
-            step{
+            steps{
 
             }
         }
         stage('Deploy to UAT'){
-            step{
+            steps{
 
             }
         }
          stage('Deploy to Staging'){
-            step{
+            steps{
 
             }
         }
          stage('Deploy to Prod'){
-            step{
+            steps{
 
             }
         }
