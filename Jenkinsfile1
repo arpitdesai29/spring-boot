@@ -25,28 +25,28 @@ pipeline {
 
         stage('Deploy to Dev'){
             steps{
-
+                 echo 'Deploy Dev'
             }
         }
         stage('Deploy to QA'){
             steps{
-
+                 echo 'Deploy QA'
             }
         }
         stage('Deploy to UAT'){
             steps{
-
-            }
+                echo 'Deploy UAT'
+            } 
         }
          stage('Deploy to Staging'){
             steps{
-
+                echo 'Deploy Stage'
             }
         }
          stage('Deploy to Prod'){
             steps{
-
-            }
+               echo 'Deploy Prod'
+            } 
         }
 
         
