@@ -49,7 +49,9 @@ pipeline {
             }
         }
 
-        post{
+        
+    }
+    post{
             failure{
                 echo 'fail'
             }
@@ -62,5 +64,4 @@ pipeline {
                 echo 'always'
             }
         }
-    }
 } 
