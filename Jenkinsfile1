@@ -1,0 +1,66 @@
+pipeline {
+    agent any
+    stages{
+        stage('Build'){
+            step{
+             echo 'Build'
+            }
+        }
+        stage('Test'){
+            step{
+              echo 'Test'
+            }
+        }
+        stage('Quality Gate - sonar Quebe'){
+            step{
+               echo 'sonar'
+            }
+        }
+        stage('Push to atrifactory'){
+            step{
+                echo 'Build'
+            }
+        }
+
+
+        stage('Deploy to Dev'){
+            step{
+
+            }
+        }
+        stage('Deploy to QA'){
+            step{
+
+            }
+        }
+        stage('Deploy to UAT'){
+            step{
+
+            }
+        }
+         stage('Deploy to Staging'){
+            step{
+
+            }
+        }
+         stage('Deploy to Prod'){
+            step{
+
+            }
+        }
+
+        post{
+            failure{
+                echo 'fail'
+            }
+            
+            success{
+                echo 'Success'
+            }
+            
+            always{
+                echo 'always'
+            }
+        }
+    }
+} 
