@@ -4,18 +4,16 @@ pipeline {
         stage('Build'){
             steps{
              echo 'Build'
+             sh 'mvn clean package'
             }
         }
         stage('Test'){
             steps{
               echo 'Test'
+              sh 'mvn test'
             }
         }
-        stage('Quality Gate - sonar Quebe'){
-            steps{
-               echo 'sonar'
-            }
-        }
+       
         stage('Push to atrifactory'){
             steps{
                 echo 'Build'
@@ -33,11 +31,7 @@ pipeline {
                  echo 'Deploy QA'
             }
         }
-        stage('Deploy to UAT'){
-            steps{
-                echo 'Deploy UAT'
-            } 
-        }
+        
          stage('Deploy to Staging'){
             steps{
                 echo 'Deploy Stage'
@@ -60,8 +54,6 @@ pipeline {
                 echo 'Success'
             }
             
-            always{
-                echo 'always'
-            }
+           
         }
 } 
